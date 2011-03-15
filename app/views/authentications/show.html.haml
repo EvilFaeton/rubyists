@@ -1,0 +1,12 @@
+- title "Authentication"
+
+%p
+  %strong User:
+  = @authentication.user_id
+
+%p
+  = link_to "Edit", edit_authentication_path(@authentication)
+  |
+  = link_to "Destroy", @authentication, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", authentications_path
