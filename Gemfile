@@ -11,9 +11,15 @@ gem 'devise'
 gem 'omniauth'
 gem 'haml'
 gem 'sass'
+gem 'compass'
+gem 'kaminari'
 
-
-gem "nifty-generators", :group => :development
+group :development do
+  gem "nifty-generators"
+  gem "annotate"
+  gem "faker"
+  gem "populator"
+end
 # Use unicorn as the web server
 # gem 'unicorn'
 
