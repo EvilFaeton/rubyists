@@ -13,12 +13,15 @@ gem 'haml'
 gem 'sass'
 gem 'compass'
 gem 'kaminari'
+gem 'carrierwave' 
 
 group :development do
   gem "nifty-generators"
   gem "annotate"
   gem "faker"
   gem "populator"
+  gem 'ruby_parser'
+  gem 'hpricot'
 end
 # Use unicorn as the web server
 # gem 'unicorn'
