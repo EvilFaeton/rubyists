@@ -13,7 +13,8 @@ gem 'haml'
 gem 'sass'
 gem 'compass'
 gem 'kaminari'
-gem 'carrierwave' 
+gem 'carrierwave'
+gem "rmagick"
 
 group :development do
   gem "nifty-generators"
