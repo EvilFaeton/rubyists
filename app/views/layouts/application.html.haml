@@ -25,17 +25,7 @@
           %strong
             We're best!
 
-      %nav
-        %ul
-          %li{:class => 'active'}
-            %a{:href => '/companies'}
-              = t('menu.companies')
-          %li
-            %a{:href => '/users'}
-              = t('menu.developers')
-          %li
-            %a{:href => '/about'}
-              = t('menu.about')
+      %nav= render_navigation :level => 1
     %section{:id => 'content', :class => 'body'} 
       #container
         - flash.each do |name, msg|

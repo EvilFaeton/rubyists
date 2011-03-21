@@ -15,6 +15,8 @@ gem 'compass'
 gem 'kaminari'
 gem 'carrierwave'
 gem "rmagick"
+gem 'simple-navigation'
+
 
 group :development do
   gem "nifty-generators"
