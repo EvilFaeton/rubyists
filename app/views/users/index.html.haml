@@ -9,8 +9,8 @@
     %th
       Company
 
-- @users.each do |user|
-  %tr
-    %td= user.email
-    %td= user.name
-    %td= user.company
+  - @users.each do |user|
+    %tr
+      %td= user.email
+      %td= user.name
+      %td= user.company

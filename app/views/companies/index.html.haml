@@ -1,0 +1,13 @@
+- title 'Рубисты'
+
+%table
+  %tr
+    %th
+      Name
+    %th
+      City 
+
+  - @companies.each do |company|
+    %tr
+      %td= company.name
+      %td= company.city.name
