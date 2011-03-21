@@ -20,7 +20,7 @@
   %body{:id => 'index', :class => 'home'}
     %header{:id => 'banner', :class => 'body'}
       %h1
-        %a{:href => '#'}
+        %a{:href => '/'}
           Ruby Community
           %strong
             We're best!
@@ -28,11 +28,14 @@
       %nav
         %ul
           %li{:class => 'active'}
-            %a{:href => '#'}
-              Компании
+            %a{:href => '/companies'}
+              = t('menu.companies')
           %li
-            %a{:href => '#'}
-              Разработчики
+            %a{:href => '/users'}
+              = t('menu.developers')
+          %li
+            %a{:href => '/about'}
+              = t('menu.about')
     %section{:id => 'content', :class => 'body'} 
       #container
         - flash.each do |name, msg|
@@ -55,7 +58,7 @@
           Rubyist.ru is a website and blog that offers resources and advice to ruby developers.
 
       %p
-        2010
+        2011
         %a{:href => '#'}
           Rubyist.ru
 

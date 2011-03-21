@@ -1,0 +1,16 @@
+- title 'Рубисты'
+
+%table
+  %tr
+    %th
+      Email
+    %th
+      Name
+    %th
+      Company
+
+- @users.each do |user|
+  %tr
+    %td= user.email
+    %td= user.name
+    %td= user.company
