@@ -12,5 +12,7 @@ Rubyists::Application.routes.draw do
   resources :companies, :only => [:index, :show]
   resources :users
   
+  # match '/:name' => "users/show", :requirements => { :name => /([a-z0-9\_\-]+)/i }
+  
   root :to => 'users#index'
 end

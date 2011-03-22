@@ -34,4 +34,8 @@ class User < ActiveRecord::Base
   def name
     "#{first_name} #{last_name}"
   end
+  
+  def to_param
+    name.gsub(/\s/, '_').gsub(/[^\w\d\-_]/, '').downcase
+  end
 end

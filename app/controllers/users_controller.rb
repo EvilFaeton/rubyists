@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     @users = User.order("first_name").page(params[:page]).per(10)
   end
   
-  def show; end
+  def show
+    @user = User.find params[:id]
+  end
 
 end
