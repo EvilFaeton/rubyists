@@ -34,6 +34,8 @@ class Company < ActiveRecord::Base
   
   acts_as_taggable_on :technologies, :cities
 
+  mount_uploader :image, ImageUploader
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
 end

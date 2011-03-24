@@ -1,13 +1,30 @@
-- title 'Рубисты'
+- title t('menu.companies')
 
-%table
-  %tr
-    %th
-      Name
-    %th
-      City 
+.company_list
+  = paginate @companies
+  - @companies.each_with_index do |c,index|
+    .company_block
+      %img.right{:src => c.image.url, :alt => c.name}
+      %strong 
+        = c.name
+      .buttons
+        = link_to 'Twitter', 'http://twitter.com/'+c.twitter
+        = link_to 'Facebook', c.facebook
+        = link_to 'Vkontakte', c.vkonatkte
+      .cities
+        %strong 
+          = t('city')+':'
+        %ul  
+          - c.city_list.each do |city|
+            %li 
+              = city
+      .clear
+      .technologies
+        %strong
+          = t('technologies')+':'          
+        - c.technology_list.each do |tech|
+          %span 
+            = tech
 
-  - @companies.each do |company|
-    %tr
-      %td= company.name
-      %td= company.city.name
+    -if index %2 == 1 
+      .clear
