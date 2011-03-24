@@ -16,7 +16,7 @@ gem 'kaminari'
 gem 'carrierwave'
 gem "rmagick"
 gem 'simple-navigation'
-
+gem 'acts-as-taggable-on'
 
 group :development do
   gem "nifty-generators"
