@@ -32,7 +32,7 @@ class Company < ActiveRecord::Base
   
   #belongs_to :city
   
-  act_as_taggable_on :technologies, :cities
+  acts_as_taggable_on :technologies, :cities
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me

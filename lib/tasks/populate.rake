@@ -45,7 +45,9 @@ namespace :db do
           company.facebook = 'http://' + Faker::Internet.domain_name
           company.vkonatkte = 'http://' + Faker::Internet.domain_name
           company.password_confirmation = company.password = 'testtest'
-          company.city_id = City.all[rand(9)].id
+          #company.city_id = City.all[rand(9)].id
+          company.technology_list = Faker::Lorem.words(5).uniq.join(', ') 
+          company.city_list = Faker::Lorem.words(rand(3)+1).uniq.join(', ') 
         end
         puts %{Company "#{company.name}" was created}
       end
